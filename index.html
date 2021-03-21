@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фонд капитального ремонта</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+</head>
+<body>
+    <script>
+            const body = document.body;
+            const scaleX =  body.clientWidth / 1920.0;
+            body.style.zoom = `${scaleX}`;
+    </script>
+    <header>
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="nav-and-logo">
+                    <div style="margin-top: 3px;">
+                        <input type="checkbox" class="hamburger-menu__checkbox" id="burger-checkbox">
+                        <label class="hamburger-menu__burger" for="burger-checkbox"></label>
+                    </div>
+                    <ul class="menu-list" id="menu-list">
+                        <li>
+                            <a href="/">
+                                Главная
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/about.html">
+                                О фонде
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                Мой дом
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                Собственникам
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                Региональная программа
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                НПА и иные документы ФКР РС(Я)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                Отчетность
+                            </a>
+                        </li>
+                    </ul>
+                    <a class="logo__wrapper" href="/" id="header-logo">
+                        <img src="./assets/images/logo.png" alt="Логотип" class="logo">
+                        <p class="fondk_name">
+                            НКО «Фонд капитального ремонта <br>
+                            многоквартирных домов <br>
+                            Республики Саха (Якутия)» 
+                        </p>
+                    </a>
+                </div>
+                <div class="login-and-search">
+                    <div class="search">
+                        <button class="search-btn" id="search-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6631 15.6632C15.8024 15.5237 15.9678 15.4131 16.1499 15.3376C16.332 15.2621 16.5272 15.2233 16.7243 15.2233C16.9215 15.2233 17.1167 15.2621 17.2988 15.3376C17.4809 15.4131 17.6463 15.5237 17.7856 15.6632L23.5608 21.4384C23.8423 21.7197 24.0005 22.1012 24.0006 22.4992C24.0008 22.8971 23.8428 23.2787 23.5616 23.5602C23.2803 23.8417 22.8987 23.9999 22.5008 24C22.1029 24.0002 21.7212 23.8422 21.4397 23.561L15.6646 17.7858C15.5251 17.6465 15.4144 17.481 15.339 17.2989C15.2635 17.1168 15.2246 16.9216 15.2246 16.7245C15.2246 16.5274 15.2635 16.3322 15.339 16.1501C15.4144 15.968 15.5251 15.8025 15.6646 15.6632H15.6631Z"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.75031 18.0006C10.8338 18.0006 11.9066 17.7872 12.9076 17.3726C13.9085 16.958 14.818 16.3502 15.5841 15.5841C16.3502 14.818 16.958 13.9085 17.3726 12.9076C17.7872 11.9066 18.0006 10.8338 18.0006 9.75031C18.0006 8.66687 17.7872 7.59404 17.3726 6.59307C16.958 5.59211 16.3502 4.6826 15.5841 3.91649C14.818 3.15039 13.9085 2.54268 12.9076 2.12806C11.9066 1.71345 10.8338 1.50005 9.75031 1.50005C7.56221 1.50005 5.46372 2.36927 3.9165 3.9165C2.36927 5.46372 1.50005 7.56221 1.50005 9.75031C1.50005 11.9384 2.36927 14.0369 3.9165 15.5841C5.46372 17.1314 7.56221 18.0006 9.75031 18.0006ZM19.5006 9.75031C19.5006 12.3363 18.4734 14.8163 16.6448 16.6448C14.8163 18.4734 12.3363 19.5006 9.75031 19.5006C7.16437 19.5006 4.68434 18.4734 2.8558 16.6448C1.02726 14.8163 0 12.3363 0 9.75031C0 7.16437 1.02726 4.68434 2.8558 2.8558C4.68434 1.02726 7.16437 0 9.75031 0C12.3363 0 14.8163 1.02726 16.6448 2.8558C18.4734 4.68434 19.5006 7.16437 19.5006 9.75031Z"/>
+                            </svg>                                
+                        </button>
+                        <form action="/">
+                            <input type="text" name="query" class="search-inp" id="search-inp">
+                        </form>
+                    </div>
+                    <button class="login">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3334 9.75C17.3334 10.8993 16.8769 12.0015 16.0642 12.8141C15.2516 13.6268 14.1494 14.0833 13.0001 14.0833C11.8508 14.0833 10.7486 13.6268 9.93595 12.8141C9.12329 12.0015 8.66675 10.8993 8.66675 9.75C8.66675 8.60073 9.12329 7.49853 9.93595 6.68587C10.7486 5.87321 11.8508 5.41666 13.0001 5.41666C14.1494 5.41666 15.2516 5.87321 16.0642 6.68587C16.8769 7.49853 17.3334 8.60073 17.3334 9.75ZM15.1667 9.75C15.1667 10.3246 14.9385 10.8757 14.5321 11.2821C14.1258 11.6884 13.5747 11.9167 13.0001 11.9167C12.4254 11.9167 11.8743 11.6884 11.468 11.2821C11.0617 10.8757 10.8334 10.3246 10.8334 9.75C10.8334 9.17536 11.0617 8.62426 11.468 8.21793C11.8743 7.8116 12.4254 7.58333 13.0001 7.58333C13.5747 7.58333 14.1258 7.8116 14.5321 8.21793C14.9385 8.62426 15.1667 9.17536 15.1667 9.75Z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13 1.08333C6.41879 1.08333 1.08337 6.41875 1.08337 13C1.08337 19.5812 6.41879 24.9167 13 24.9167C19.5813 24.9167 24.9167 19.5812 24.9167 13C24.9167 6.41875 19.5813 1.08333 13 1.08333ZM3.25004 13C3.25004 15.2642 4.02246 17.3485 5.31704 19.0038C6.22621 17.8099 7.3991 16.8423 8.74409 16.1767C10.0891 15.511 11.5698 15.1654 13.0705 15.1667C14.5517 15.1653 16.0138 15.502 17.3452 16.1512C18.6766 16.8004 19.8423 17.7449 20.7535 18.9128C21.6921 17.6817 22.3241 16.2448 22.5972 14.721C22.8702 13.1971 22.7765 11.6302 22.3237 10.1497C21.871 8.6693 21.0722 7.31797 19.9935 6.20754C18.9148 5.09711 17.5871 4.25951 16.1205 3.76405C14.6538 3.26859 13.0902 3.1295 11.5591 3.3583C10.0279 3.5871 8.57331 4.17721 7.31554 5.07981C6.05777 5.9824 5.033 7.17152 4.32604 8.54879C3.61908 9.92606 3.25024 11.4519 3.25004 13ZM13 22.75C10.7618 22.7534 8.59116 21.9834 6.85537 20.5703C7.55405 19.5701 8.48399 18.7535 9.56608 18.1899C10.6482 17.6263 11.8504 17.3325 13.0705 17.3333C14.2753 17.3324 15.463 17.6189 16.5349 18.169C17.6068 18.7192 18.5319 19.5172 19.2335 20.4967C17.4843 21.9556 15.2778 22.7532 13 22.75Z"/>
+                        </svg>    
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="homepage-main">
+                <section class="site-info">
+                    <h1 class="site-title">Фонд капитального ремонта</h1>
+                    <p class="site-desc">Республики Саха (Якутия)</p>
+
+                    <a href="#" class="search-home">Найти свой дом</a>
+                </section>
+                <section class="reporting">
+                    <p class="reporting-title">
+                        Отчетность
+                    </p>
+                    <div class="docs-wrapper">
+                        <a href="#" class="document">
+                            ИНФОРМАЦИЯ 
+                            об органах, осуществляющих контроль и надзор 
+                            за деятельностью регионального оператора
+                        </a>
+                        <a href="#" class="document">
+                            Требования к финансовой устойчивости деятельности регионального оператора
+                        </a>
+                    </div>
+                    <a href="#" class="all-docs">Смотреть все</a>
+                </section>
+                <section class="news">
+                    <div class="section-header">
+                        <div class="section-title">
+                            новости
+                        </div>
+                        <a href="#" class="more">
+                            <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L7 7L1 13" stroke-width="2"/>
+                            </svg>                                
+                        </a>
+                    </div>
+                    <button class="news__btn-prev">
+                        <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.77216 13L2.00001 7L7.77216 1" stroke="#969696" stroke-width="2"/>
+                        </svg>                                
+                    </button>
+                    <div class="news-slider">
+                        <div class="news-slide">
+                            <img src="./assets/images/news.png" alt="" class="news-image">
+                            <div class="news-slide__content">
+                                <h3 class="news-title">Исполнение региональной программы капитального ремонта в 2020 году</h3>
+                                <p class="news-text">По результатам 2020 года, в рамках выполнения краткосрочного плана реализации региональной программы капитального ремонта общего имущества в многоквартирных домах на территории Республики Саха (Якутия) выполнен капитальный ремонт в 200 многоквартирных домах по 352 видам работ на общ...</p>
+                            </div>
+                            <div class="publication-date">Сегодня, 14:38</div>
+                            <div class="views-counter news__views-counter">56</div>
+                        </div>
+                        <div class="news-slide">
+                            <img src="./assets/images/news.png" alt="" class="news-image">
+                            <div class="news-slide__content">
+                                <h3 class="news-title">Исполнение региональной программы капитального ремонта в 2020 году</h3>
+                                <p class="news-text">По результатам 2020 года, в рамках выполнения краткосрочного плана реализации региональной программы капитального ремонта общего имущества в многоквартирных домах на территории Республики Саха (Якутия) выполнен капитальный ремонт в 200 многоквартирных домах по 352 видам работ на общ...</p>
+                            </div>
+                            <div class="publication-date">Сегодня, 14:38</div>
+                            <div class="views-counter news__views-counter">56</div>
+                        </div>
+                        <div class="news-slide">
+                            <img src="./assets/images/news.png" alt="" class="news-image">
+                            <div class="news-slide__content">
+                                <h3 class="news-title">Исполнение региональной программы капитального ремонта в 2020 году</h3>
+                                <p class="news-text">По результатам 2020 года, в рамках выполнения краткосрочного плана реализации региональной программы капитального ремонта общего имущества в многоквартирных домах на территории Республики Саха (Якутия) выполнен капитальный ремонт в 200 многоквартирных домах по 352 видам работ на общ...</p>
+                            </div>
+                            <div class="publication-date">Сегодня, 14:38</div>
+                            <div class="views-counter news__views-counter">56</div>
+                        </div>
+                        <div class="news-slide">
+                            <img src="./assets/images/news.png" alt="" class="news-image">
+                            <div class="news-slide__content">
+                                <h3 class="news-title">Исполнение региональной программы капитального ремонта в 2020 году</h3>
+                                <p class="news-text">По результатам 2020 года, в рамках выполнения краткосрочного плана реализации региональной программы капитального ремонта общего имущества в многоквартирных домах на территории Республики Саха (Якутия) выполнен капитальный ремонт в 200 многоквартирных домах по 352 видам работ на общ...</p>
+                            </div>
+                            <div class="publication-date">Сегодня, 14:38</div>
+                            <div class="views-counter news__views-counter">56</div>
+                        </div>
+                    </div>
+                    <button class="news__btn-next">
+                        <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L6.77216 7L1 13" stroke="#969696" stroke-width="2"/>
+                        </svg>                                              
+                    </button>
+                </section>
+                <section class="info">
+                    <div class="info__wrapper">
+                        <ul class="info-parts">
+                            <li class="info-toggle active" toggle="info-content__pay">Онлайн оплата</li>
+                            <li class="info-toggle" toggle="info-content__book">Азбука услуг ЖКХ</li>
+                            <li class="info-toggle" toggle="info-content__contractors">Подрядчикам</li>
+                            <li class="info-toggle" toggle="info-content__organs">Для органов МСУ</li>
+                        </ul>
+                        <div class="info-part info-content__pay active">
+                            <div class="pay-item">
+                                <img src="./assets/images/svg/fluent_payment-16-regular.svg" alt="" class="pay-img">
+                                <div class="pay-desc">Оплата онлайн</div>
+                            </div>
+                            <div class="pay-item">
+                                <img src="./assets/images/svg/cryptocurrency_sberbank.svg" alt="" class="pay-img">
+                                <div class="pay-desc">Сбербанк онлайн</div>
+                            </div>
+                            <div class="pay-item">
+                                <div class="pay-img"></div>
+                                <img src="./assets/images/svg/ph_bank.svg" alt="" class="pay-img">
+                                <div class="pay-desc">Банковские реквизиты для оплаты государственной пошлины</div>
+                            </div>
+                            <div class="pay-item">
+                                <img src="./assets/images/svg/gg_loadbar-doc.svg" alt="" class="pay-img">
+                                <div class="pay-desc">Банковские реквизиты <br>
+                                    для оплаты взносов</div>
+                            </div>
+                        </div>
+                        <a class="info-part info-content__book" href="#">
+                            <div class="book-img">
+                                <img src="./assets/images/book.png" alt="" class="">
+                            </div>
+                            <div class="book__hide-block">
+                                <p class="book-name">АЗБУКА для потребителей услуг ЖКХ</p>
+                                <p class="book-info">
+                                    <div class="book-info__size">11,87 Mb</div>
+                                    <div class="book-info__loads">cкачиваний: 25</div>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="info-part info-content__contractors">
+                            <div class="docs-wrapper">
+                                <a href="#" class="document">
+                                    Бланк Акта о приемке работ по капитальному ремонту
+                                </a>
+                                <a href="#" class="document">
+                                    Бланк Акта приемки выполненных работ по разработке ПСД
+                                </a>
+                                <a href="#" class="document">
+                                    Бланк Доверенности проверки достоверности опред-я смет.ст-сти КР
+                                </a>
+                            </div>
+                            <a href="#" class="all-docs">Смотреть все</a>
+                        </div>
+                        <div class="info-part info-content__organs">
+                            <div class="docs-wrapper">
+                                <a href="#" class="document">
+                                    Проект Актуализации краткосрочного плана реализации Региональной программы с изменениями, внесенными Указом Главы РС(Я) от 25.05.2020 № 1208
+                                </a>
+                                <a href="#" class="document">
+                                    KPKR-pilotnyy-proekt-lifty-2018-g.-na-soglasovanie.xlsx
+                                </a>
+                            </div>
+                            <a href="#" class="all-docs">Смотреть все</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="videos">
+                    <div class="section-header">
+                        <div class="section-title">
+                            видео
+                        </div>
+                        <a href="/videos.html" class="more">
+                            <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L7 7L1 13" stroke-width="2"/>
+                            </svg>                                
+                        </a>
+                    </div>
+
+                    <button class="videos__btn-prev">
+                        <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.77216 13L2.00001 7L7.77216 1" stroke="#969696" stroke-width="2"/>
+                        </svg>                                
+                    </button>
+                    <div class="videos-slider">
+                        <div class="videos-slide">
+                            <img src="./assets/images/videos.png" alt="" class="video-img">
+                            <h4 class="video-title">Интервью генерального директора Фонда Пермякова Влада Михайловича в программе "Кунтэн Кун” (на якутском языке)</h4>
+                            <div class="video__public-date">29.10.2018, 14:38</div>
+                            <div class="views-counter videos__views-counter">56</div>
+                        </div>
+                        <div class="videos-slide">
+                            <img src="./assets/images/videos.png" alt="" class="video-img">
+                            <h4 class="video-title">Интервью генерального директора Фонда Пермякова Влада Михайловича в программе "Кунтэн Кун” (на якутском языке)</h4>
+                            <div class="video__public-date">29.10.2018, 14:38</div>
+                            <div class="views-counter videos__views-counter">56</div>
+                        </div>
+                        <div class="videos-slide">
+                            <img src="./assets/images/videos.png" alt="" class="video-img">
+                            <h4 class="video-title">Интервью генерального директора Фонда Пермякова Влада Михайловича в программе "Кунтэн Кун” (на якутском языке)</h4>
+                            <div class="video__public-date">29.10.2018, 14:38</div>
+                            <div class="views-counter videos__views-counter">56</div>
+                        </div>
+                        <div class="videos-slide">
+                            <img src="./assets/images/videos.png" alt="" class="video-img">
+                            <h4 class="video-title">Интервью генерального директора Фонда Пермякова Влада Михайловича в программе "Кунтэн Кун” (на якутском языке)</h4>
+                            <div class="video__public-date">29.10.2018, 14:38</div>
+                            <div class="views-counter videos__views-counter">56</div>
+                        </div>
+                    </div>
+                    <button class="videos__btn-next">
+                        <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L6.77216 7L1 13" stroke="#969696" stroke-width="2"/>
+                        </svg>                                              
+                    </button>
+                </section>
+                <section class="questions">
+                    <div class="section-header">
+                        <div class="section-title" style="margin-left: 20px;">
+                            Часто задаваемые вопросы
+                        </div>
+                        <a href="#" class="more">
+                            <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L7 7L1 13" stroke-width="2"/>
+                            </svg>                                
+                        </a>
+                    </div>
+                    <div class="questions__wrapper">
+                        <a href="#" class="question-link">
+                            <b>Что такое капитальный ремонт?</b>
+                        </a>
+                        <a href="#" class="question-link">
+                            Как узнать в каком году стоит ремонт по плану мой дом?
+                        </a>
+                        <a href="#" class="question-link">
+                            Если наш дом ветхий, как признать его > аварийным?
+                        </a>
+                    </div>
+                </section>
+                <section class="contacts foorer-section">
+                    <div class="footer-label">
+                        Контакты
+                    </div>
+                    <div class="footer-section__content">
+                        <div class="contacts__wrapper">
+                            <div class="contact-label">Контакты</div>
+                            <a href="#" class="contacts-phone">+ 7 (4112) 31-90-14</a>
+                            <div class="contact-label">Адрес</div>
+                            <div class="address">г. Якутск, ул. Чепалова д.32</div>
+                        </div>
+                    </div>
+                </section>
+                <section class="socials foorer-section">
+                    <div class="footer-label">
+                        Социальные сети
+                    </div>
+                    <div class="footer-section__content">
+                        <div class="socials__wrrapper">
+                            <div class="contact-label">Социальные сети</div>
+                            <div class="socials__links">
+                                <a href="#" class="insta-link">
+                                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M24.4 1H8.8C4.49218 1 1 4.49218 1 8.8V24.4C1 28.7078 4.49218 32.2 8.8 32.2H24.4C28.7078 32.2 32.2 28.7078 32.2 24.4V8.8C32.2 4.49218 28.7078 1 24.4 1Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M22.84 15.6172C23.0325 16.9155 22.8108 18.2414 22.2063 19.4064C21.6018 20.5715 20.6453 21.5162 19.4729 22.1063C18.3006 22.6964 16.972 22.9018 15.6761 22.6932C14.3803 22.4847 13.1832 21.8729 12.2552 20.9448C11.3271 20.0168 10.7153 18.8197 10.5067 17.5238C10.2982 16.228 10.5036 14.8994 11.0937 13.727C11.6838 12.5547 12.6285 11.5982 13.7935 10.9937C14.9585 10.3892 16.2845 10.1675 17.5828 10.36C18.9071 10.5564 20.1332 11.1735 21.0798 12.1201C22.0265 13.0668 22.6436 14.2929 22.84 15.6172Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M25.1801 8.02002H25.1961" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>    
+                                </a>  
+                                <img src="./assets/images/qr.png" alt="" width="143">                       
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="partners foorer-section">
+                    <div class="footer-label">
+                        партнеры
+                    </div>
+                    <div class="footer-section__content">
+                        <div class="contact-label partners-label">Партнеры</div>
+                        <button class="partners__btn-prev">
+                            <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.77216 13L2.00001 7L7.77216 1" stroke="#969696" stroke-width="2"/>
+                            </svg>                                
+                        </button>
+                        <div class="partners-slider">
+                            <div class="partner-slide">
+                                <div class="partner-slide__content">
+                                    <img src="./assets/images/partner.png" alt="" class="partner-logo">
+                                    <p class="partner-desc">Портал Республики Саха (Якутия)</p>
+                                </div>
+                            </div>
+                            <div class="partner-slide">
+                                <div class="partner-slide__content">
+                                    <img src="./assets/images/portal.png" alt="" class="partner-logo">
+                                    <p class="partner-desc">Портал Республики Саха (Якутия)</p>
+                                </div>
+                            </div>
+                            <div class="partner-slide">
+                                <div class="partner-slide__content">
+                                    <img src="./assets/images/home.png" alt="" class="partner-logo">
+                                    <p class="partner-desc">Портал Республики Саха (Якутия)</p>
+                                </div>
+                            </div>
+                            <div class="partner-slide">
+                                <div class="partner-slide__content">
+                                    <img src="./assets/images/fk.png" alt="" class="partner-logo">
+                                    <p class="partner-desc">Портал Республики Саха (Якутия)</p>
+                                </div>
+                            </div>
+                            <div class="partner-slide">
+                                <div class="partner-slide__content">
+                                    <img src="./assets/images/gkh.png" alt="" class="partner-logo">
+                                    <p class="partner-desc">Портал Республики Саха (Якутия)</p>
+                                </div>
+                            </div>
+                            <div class="partner-slide">
+                                <div class="partner-slide__content">
+                                    <img src="./assets/images/potato.png" alt="" class="partner-logo">
+                                    <p class="partner-desc">Портал Республики Саха (Якутия)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="partners__btn-next">
+                            <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6.77216 7L1 13" stroke="#969696" stroke-width="2"/>
+                            </svg>                                              
+                        </button>
+                    </div>
+                </section>
+                <section class="copyright">
+                    <p class="copyright-text">2021 © Все права защищены</p>
+                    <a href="#" class="user-accept">Пользовательское соглашение</a>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
